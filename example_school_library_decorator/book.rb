@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Book
+class Book # rubocop:todo Style/Documentation
   attr_accessor :title, :author, rentals
 
   def initialize(title, author)

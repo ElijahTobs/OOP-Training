@@ -2,11 +2,11 @@
 
 require './corrector'
 
-class Person
+class Person # rubocop:todo Style/Documentation
   attr_accessor :name, :age
   attr_reader :id
 
-  def initialize(age, name = 'Unknown', parent_permission = true)
+  def initialize(age, name = 'Unknown', parent_permission = true) # rubocop:todo Style/OptionalBooleanParameter
     @id = Random.rand(1..1000)
     @corrector = Corrector.new
     @age = age
@@ -24,7 +24,7 @@ class Person
 
   private
 
-  def is_of_age?
+  def is_of_age? # rubocop:todo Naming/PredicateName
     @age >= 18
   end
 end
