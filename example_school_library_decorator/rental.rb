@@ -1,5 +1,6 @@
-class Rental
+# frozen_string_literal: true
 
+class Rental
   attr_accessor :date, :book
 
   def initialize(date, book)
@@ -7,5 +8,4 @@ class Rental
     @book = book
     book.rentals.push(self)
   end
-
 end
