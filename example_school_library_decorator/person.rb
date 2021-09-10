@@ -1,12 +1,10 @@
-# frozen_string_literal: true
-
 require './corrector'
 
-class Person # rubocop:todo Style/Documentation
+class Person
   attr_accessor :name, :age
   attr_reader :id
 
-  def initialize(age, name = 'Unknown', parent_permission = true) # rubocop:todo Style/OptionalBooleanParameter
+  def initialize(age, name = 'Unknown', parent_permission = true)
     @id = Random.rand(1..1000)
     @corrector = Corrector.new
     @age = age
@@ -24,7 +22,7 @@ class Person # rubocop:todo Style/Documentation
 
   private
 
-  def is_of_age? # rubocop:todo Naming/PredicateName
+  def is_of_age?
     @age >= 18
   end
 end

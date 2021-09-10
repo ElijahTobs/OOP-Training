@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-class Rental # rubocop:todo Style/Documentation
+class Rental
   attr_accessor :date, :book
 
   def initialize(date, book)
