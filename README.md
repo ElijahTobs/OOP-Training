@@ -29,17 +29,23 @@ e.g. $ git clone https://github.com/ElijahTobs/OOP-Training.git
 8. Go into the folder you cloned in this step 7 on your terminal
 e.g. $ cd Desktop/OOP-Training
 9. Check out in the feature branch
+10. Run ```ruby example_school_library_decorator/main.rb``` to see the ui implemeted
 
 ## Built with
 
 - Ruby
 - Rubocop
 
-## Author
+## Authors
 ​
 👤 **Elijah Ayandokun**
 ​
 - Github: [@elijahtobs](https://github.com/elijahtobs)
 - Linkedin: [Elijah Ayandokun](https://www.linkedin.com/in/ayandokunelijah/)
 - Twitter: [@ElijahTobs](https://twitter.com/ElijahTobs)
-​
+
+​ 👤 **Rose Sumba**
+
+- GitHub: [@ZawadiSumba66](https://github.com/ZawadiSumba66)
+- Twitter: [@zawadirose1](https://twitter.com/zawadirose1)
+- LinkedIn: [rose-sumba](https://www.linkedin.com/in/rosesumba/)
