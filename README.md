@@ -13,6 +13,7 @@ Application is based on the Ruby OOP: school library projects 1 and 2.
 - Added relationship between class and book
 - Added relationship person and rental
 - Added relationship between classroom and student
+- The implementation of the UI to get to see the app in action.
 
 ## Getting Started
 ​
