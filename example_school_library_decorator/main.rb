@@ -41,7 +41,7 @@ class App
 
     print 'Name: '
 
-    name = gets.chomp
+    name = gets.chomp.to_s
 
     person =
       case person_type
@@ -55,7 +55,7 @@ class App
       when '2'
         print 'Specialization: '
 
-        specialization = gets.chomp
+        specialization = gets.chomp.to_s
 
         Teacher.new(age, specialization, name)
       end
@@ -69,6 +69,10 @@ class App
     print 'Title: '
 
     title = gets.chomp
+
+    print 'Author: '
+
+    author = gets.chomp
 
     @books << Book.new(title, author)
     puts 'Book created successfully'
