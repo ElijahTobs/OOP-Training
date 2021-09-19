@@ -1,8 +1,9 @@
-require './person'
+# rubocop:disable Style/OptionalBooleanParameter
+require_relative 'person'
 
 class Teacher < Person
-  def initialize(age, specialization, name = 'Unknown', parent_permission: true)
-    super(age, name, parent_permission)
+  def initialize(age, specialization, name = 'Unknown', _parent_permission = true)
+    super(age, name, specialization)
     @specialization = specialization
   end
 
@@ -10,3 +11,4 @@ class Teacher < Person
     true
   end
 end
+# rubocop:enable Style/OptionalBooleanParameter
