@@ -50,3 +50,9 @@ e.g. $ cd Desktop/OOP-Training
 - GitHub: [@ZawadiSumba66](https://github.com/ZawadiSumba66)
 - Twitter: [@zawadirose1](https://twitter.com/zawadirose1)
 - LinkedIn: [rose-sumba](https://www.linkedin.com/in/rosesumba/)
+
+👤 **NSABIMANA Emmanuel**
+
+- GitHub: [@emmyn5600](https://github.com/Emmyn5600)
+- Twitter: [@NSABIMA62253884](https://twitter.com/NSABIMA62253884)
+- LinkedIn: [@nsabimana-emmanuel-4276091b2](https://www.linkedin.com/in/nsabimana-emmanuel-4276091b2/)
