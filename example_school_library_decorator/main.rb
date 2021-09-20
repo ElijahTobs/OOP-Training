@@ -13,66 +13,70 @@ class App
   end
 
   # *List all books
-  def list_books
-    @books.each do |book|
-      puts "Title: \"#{book.title}\", Author: #{book.author}"
+  def list_of_books
+    if @books.length.positive?
+      @books.each { |book| puts "title: #{book.title}, Author: #{book.author}" }
+    else
+      puts 'There are no books created so far'
     end
   end
 
   # *List all people
-  def list_people
-    @people.each do |person|
-      puts "[#{person.classroom}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+  def list_of_people
+    if @people.length.positive?
+      @people.each do |person|
+        puts "Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+      end
+    else
+      puts 'There are no people created'
     end
   end
 
   def create_person
-    print 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
+    puts 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
+    print 'Choose either (1) or (2): '
 
-    person_type = gets.chomp
-    if person_type != '1' && person_type != '2'
-      puts 'Invalid option'
-      return
+    person_type_selection = gets.chomp
+    case person_type_selection
+    when '1'
+      print 'Age: '
+      age = gets.chomp.to_i
+
+      print 'Name: '
+      name = gets.chomp.to_s
+
+      print 'Has parent permission? [Y/N]: '
+      permission = gets.chomp
+      permission = permission.downcase == 'y'
+
+      @people << Student.new(age, name, permission)
+
+      puts 'student created successfully'
+    when '2'
+      print 'Age: '
+      age = gets.chomp
+
+      print 'Name: '
+      name = gets.chomp
+
+      print 'Specialization: '
+      specialization = gets.chomp
+      @people << Teacher.new(age, specialization, name)
+
+      puts 'Teacher created successfully'
+
+    else
+      puts 'invalid selection'
+      nil
     end
-
-    print 'Age: '
-
-    age = gets.chomp
-
-    print 'Name: '
-
-    name = gets.chomp.to_s
-
-    person =
-      case person_type
-      when '1'
-        print 'Has parent permission? [Y/N]: '
-
-        parent_permission = gets.chomp
-        parent_permission = parent_permission.downcase == 'y'
-
-        Student.new(age, name, parent_permission)
-      when '2'
-        print 'Specialization: '
-
-        specialization = gets.chomp.to_s
-
-        Teacher.new(age, specialization, name)
-      end
-
-    @people << person
-    puts 'Person created successfully'
   end
 
-  # *Create a book.
   def create_book
     print 'Title: '
-
     title = gets.chomp
 
     print 'Author: '
-
-    author = gets.chomp
+    author = gets.to_s
 
     @books << Book.new(title, author)
     puts 'Book created successfully'
@@ -125,14 +129,16 @@ def execute
     puts '4 - Create a book'
     puts '5 - Create a rental'
     puts '6 - List all rentals for a given person id'
-
+    puts '7 - Exit'
+    print 'Choose your choice'
+    print ' '
     response = gets.chomp
 
     case response
     when '1'
-      app.list_books
+      app.list_of_books
     when '2'
-      app.list_people
+      app.list_of_people
     when '3'
       app.create_person
     when '4'
@@ -141,8 +147,9 @@ def execute
       app.create_rental
     when '6'
       app.list_rentals_for_person_id
+    when '7'
+      puts 'Thank you for your time using this library app'
     end
-
     puts "\n"
   end
 end
